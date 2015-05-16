@@ -2,5 +2,17 @@
 
 <p> <%= @article.body %> </p>
 
-<%= link_to "<<Back to Articles List", articles_path %>
 
+<footer class = "footer">
+  <p>
+    <%= link_to ">> Edit Article", edit_article_path(@article) %>
+  </p>
+
+  <p>
+    <%= link_to "X Delete Article", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"} %>
+  </p>
+
+  <p>
+    <%= link_to "<< Back to Articles List", articles_path %>
+  </p>
+</footer>
